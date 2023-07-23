@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-#import module
-#from add_0 import add
 
 #define variables
 a = 1
