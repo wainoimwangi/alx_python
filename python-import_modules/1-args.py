@@ -12,5 +12,5 @@ elif num == 1:
 else:
     end_char = ":\n"
     print("{} arguments".format(num), end=end_char)
-for i in range(1, num + 1 ):
+for i in range(1, num + 1):
     print("{}: {}".format(i, sys.argv[i]), end="\n")
