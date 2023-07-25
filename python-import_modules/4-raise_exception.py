@@ -6,7 +6,7 @@ def raise_exception():
     # try convert a string to an integer
     try:
         value = "Error message"
-        value = int(value)
+        int_value = int(value)
     # catch the type error te using except
     except TypeError as te:
         print("Type error:", te)
