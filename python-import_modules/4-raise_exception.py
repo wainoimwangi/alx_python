@@ -3,6 +3,7 @@
 
 # define raise_exception fucnction
 def raise_exception():
-        value = "I love python"
-        convert = int(value)
-        return convert
+    try:
+        raise TypeError()
+    except TypeError as te:
+        raise te
