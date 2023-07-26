@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-matrix=[[]]
+
 # define a function that prints a matrix of integers
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
@@ -8,7 +8,6 @@ def print_matrix_integer(matrix=[[]]):
             if i == len(row) - 1:
                 print("{:d}".format(element))
             else:
-                print("{:d}".format(element), end=" ")
+                print("{:d}".format(element))
 
 
-print("{}".format(print_matrix_integer(matrix)))
