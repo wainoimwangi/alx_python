@@ -2,7 +2,10 @@
 
 
 def update_dictionary(a_dictionary, key, value):
-    if key in a_dictionary:
-        a_dictionary[key] = value
+    my_dict = []
+    my_dict.update(a_dictionary)
+    if key in my_dict:
+        my_dict[key] = value
     else:
-        a_dictionary[key] = value
+        my_dict[key] = value
+    return my_dict
