@@ -2,9 +2,6 @@
 
 
 def square_matrix_simple(matrix=[]):
-    for row in matrix:
-        for i, element in enumerate(row):
-            print("{:d}".format(element), end=" " if i < len(row) - 1 else '')
     square = []
     for row in matrix:
         square_row = []
