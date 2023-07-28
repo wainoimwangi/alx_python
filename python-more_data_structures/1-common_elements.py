@@ -2,7 +2,7 @@
 
 
 def common_elements(set_1, set_2):
-    common = []
+    common = {}
     for element in set_1:
         if element in set_2:
             common.add(element)
