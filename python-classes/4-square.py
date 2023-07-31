@@ -74,7 +74,7 @@ class Square:
         when the size is equal to 0, print a new line
         """
         if self._Square__size == 0:
-            print(" ")
+            print("")
         else:
             for i in range(self._Square__size):
                 print("#" * self._Square__size)
