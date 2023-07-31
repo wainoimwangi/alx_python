@@ -11,10 +11,14 @@ You are not allowed to import any module
 """
 
 
-def is_same_class(obj, a_class)
+class a_class:
     """
-    The is_same_class function returns True if the object obj 
-    is an instance of the specified class a_class, and False 
-    otherwise.
+    Represents a clas with an instance attribute 'a_class'.
     """
-    return issubclass(type(obj))
+    def is_same_class(obj, a_class)
+        """
+        The is_same_class function returns True if the object obj 
+        is an instance of the specified class a_class, and False 
+        otherwise.
+        """
+        return issubclass(type(obj))
