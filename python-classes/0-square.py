@@ -23,8 +23,8 @@ class Square:
     """
     def __init__(self, size):
         """
-        Function/ method that initializes the object size and returns the value size.
-        
+        Function/ method that initializes the object size.
+
         Args:
             size (int): The size of the square's sides.
         """
