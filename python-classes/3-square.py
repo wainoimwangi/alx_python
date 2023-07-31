@@ -41,18 +41,12 @@ class Square:
             raise ValueError("size must be >= 0")
         self._Square__size = size
 
-    def area(self):
-        """
-        Calculates the area of the square and returns the area.
-        """
-        return self._Square__size ** 2
-
     def size(self):
         """
         Retrieves the size of the square.
         """
         return self._Square__size
- 
+
     def size(self, value):
         """
         Sets the size of the square to value.
@@ -68,4 +62,10 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        self._Square__size = value    
+        self._Square__size = value
+
+    def area(self):
+        """
+        Calculates the area of the square and returns the area.
+        """
+        return self._Square__size ** 2
