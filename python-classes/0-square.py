@@ -32,7 +32,7 @@ class Square:
         Args:
             size (int): The size of the square's sides.
         """
-        self.Square_size = size
+        self._Square__size = size
 
 
 
