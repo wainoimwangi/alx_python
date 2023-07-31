@@ -77,4 +77,4 @@ class Square:
             print("\n")
         else:
             for i in range(self._Square__size):
-                print("#")
+                print("#" * self._Square__size)
