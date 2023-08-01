@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Check if the given object is exactly an instance of the specified class.
 
