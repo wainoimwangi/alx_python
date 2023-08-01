@@ -27,9 +27,13 @@ False
 """
 
 
-def is_same_class(obj, a_class)
+class sameClass:
     """
-    The function check if the given object 
-    is exactly an instance of the specified class.
+    Check if the given object is exactly an instance of the specified class.
     """
-    return issubclass(type(obj))
+    def is_same_class(obj, a_class):
+        """
+        The function checks if the given object 
+        is exactly an instance of the specified class.
+        """
+        return issubclass(type(obj))
