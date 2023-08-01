@@ -40,4 +40,4 @@ def inherits_from(obj, a_class):
     >>> inherits_from(kitty, Mammal)
     True
     """
-    return isinstance(type(obj), a_class) and issubclass(type(obj), a_class)
+    return isinstance(obj, a_class) and issubclass(type(obj), a_class)
