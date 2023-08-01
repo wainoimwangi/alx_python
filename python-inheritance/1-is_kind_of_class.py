@@ -37,4 +37,4 @@ def is_kind_of_class(obj, a_class):
     >>> is_kind_of_class(kitty, Dog)
     False
     """
-    return isinstance(type(obj), a_class)
+    return isinstance(obj, a_class) and type(obj) is a_class
