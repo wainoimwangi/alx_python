@@ -9,3 +9,5 @@ class BaseGeometry:
     This is a base class
     """
     pass
+
+print(dir(BaseGeometry))
