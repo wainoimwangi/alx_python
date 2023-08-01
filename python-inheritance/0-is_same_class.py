@@ -1,32 +1,37 @@
 #!/usr/bin/python3
 
 
-"""
-Write a function that returns True if the object is exactly
-an instance of the specified class ; otherwise False.
+    """
+    Check if the given object is exactly an instance of the specified class.
 
-Prototype: def is_same_class(obj, a_class):
-You are not allowed to import any module
+    Parameters:
+    obj : any
+        The object to be checked for its class membership.
+    a_class : class
+        The class that the object's membership is to be tested against.
 
-    
-Parameters:
-obj : any
-    The object to be checked for its class membership.
-a_class : class
-    The class that the object's membership is to be tested against.
+    Returns:
+    bool
+        True if the object is exactly an instance of the specified class; otherwise, False.
 
-Method
-    is_same_class(obj, a_class)
-"""
+    Example:
+    >>> class Person:
+    ...     pass
+    ...
+    >>> class Student(Person):
+    ...     pass
+    ...
+    >>> obj = Person()
+    >>> is_same_class(obj, Person)
+    True
+    >>> is_same_class(obj, Student)
+    False
+    """
 
 
 def is_same_class(obj, a_class)
     """
-    The is_same_class function returns True if the object obj 
-    is an instance of the specified class a_class, and False 
-    otherwise.
-    Returns:
-    True if the object is exactly an instance of the specified class; otherwise, False.
-
+    The function check if the given object 
+    is exactly an instance of the specified class.
     """
     return issubclass(type(obj))
