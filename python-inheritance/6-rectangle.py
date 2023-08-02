@@ -28,8 +28,13 @@ class BaseGeometry:
         self.value = value
 
 class Rectangle(BaseGeometry):
-
+    """
+    This is a sub-class of the baseclass
+    """
     def __init__(self, width, height):
+        """
+        function sets the values width and height and ensures
+        """
         self.integer_validator("width", width)
         self._Rectangle__width = width
         self.integer_validator("height", height)
