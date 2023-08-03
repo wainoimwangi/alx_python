@@ -56,8 +56,7 @@ class TypeMetaClass(type):
         Exclude attribute init subclass in dir()
         """
         attributes = super().__dir__()
-        if attribute != '__init_subclass__':
-        return [attribute for attribute in attributes]
+        return [attribute for attribute in attributes if attribute != '__init_subclass__']
 
 
 class BaseGeometry(metaclass=TypeMetaClass):
@@ -69,8 +68,7 @@ class BaseGeometry(metaclass=TypeMetaClass):
         Exclude attribute init subclass in dir()
         """
         attributes = super().__dir__()
-        if attribute != '__init_subclass__':
-        return [attribute for attribute in attributes]
+        return [attribute for attribute in attributes if attribute != '__init_subclass__']
 
     def area(self):
         """
