@@ -14,8 +14,8 @@ class TypeMetaClass(type):
         Exclude attribute init subclass in dir()
         """
         attributes = super().__dir__()
-
-        return [attribute for attribute in attributes if attribute != '__init_subclass__']
+        if attribute != '__init_subclass__':
+        return [attribute for attribute in attributes]
 
 
 class BaseGeometry(metaclass=TypeMetaClass):
@@ -27,9 +27,8 @@ class BaseGeometry(metaclass=TypeMetaClass):
         Exclude attribute init subclass in dir()
         """
         attributes = super().__dir__()
-
-        return [attribute for attribute in attributes
-if attribute != '__init_subclass__']
+        if attribute != '__init_subclass__':
+        return [attribute for attribute in attributes]
 
     def area(self):
         """
@@ -68,7 +67,7 @@ class Rectangle(BaseGeometry):
         function that returns the area of the rectangle
         """
         return self.__width * self.__height
-  
+
     def __str__(self):
         """
         Returns a formatted string representation of the Rectangle's dimensions
@@ -76,17 +75,10 @@ class Rectangle(BaseGeometry):
         return f"[Rectangle] {self.__width}/{self.__height}"
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """
     This is a sub-class of the baseclass
     """
-    def __dir__(cls) -> None:
-        """
-        Exclude attribute init subclass in dir()
-        """
-        attributes = super().__dir__()
-        return [attribute for attribute in attributes
-        if attribute != '__init_subclass__']
 
     def __init__(self, size):
         """
