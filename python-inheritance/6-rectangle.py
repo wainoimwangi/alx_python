@@ -47,7 +47,8 @@ class BaseGeometry(metaclass=TypeMetaClass):
             raise ValueError(f"{name} must be greater than 0")
         self.value = value
 
-class Rectangle(BaseGeometry):
+
+class Rectangle(BaseGeometry()):
     """
     This is a sub-class of the baseclass
     """
