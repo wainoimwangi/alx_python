@@ -14,8 +14,8 @@ class BaseGeometry:
         """
         attributes = super().__dir__()
 
-        return [attribute for attribute in attributes 
-                if attribute != '__init_subclass__']
+        return [attribute for attribute in attributes
+if attribute != '__init_subclass__']
 
     def area(self):
         """
@@ -51,7 +51,7 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         return self.__width * self.__height
-    
+  
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
 
@@ -60,6 +60,15 @@ class Square(BaseGeometry):
     """
     This is a sub-class of the baseclass
     """
+    def __dir__(cls) -> None:
+        """
+        Exclude attribute init subclass in dir()
+        """
+        attributes = super().__dir__()
+
+        return [attribute for attribute in attributes
+if attribute != '__init_subclass__']
+
     def __init__(self, size):
         """
         function sets the values width and height and ensures
