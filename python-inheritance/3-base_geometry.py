@@ -10,8 +10,10 @@ class BaseGeometry:
     """
     pass
 
-class MyNewClass:
     def __dir__(cls) -> None:
+        """
+        Exclude attribute init subclass in dir()
+        """
         attributes = super().__dir__()
 
         return [attribute for attribute in attributes if attribute != '__init_subclass__']
