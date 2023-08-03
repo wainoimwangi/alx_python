@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 """
-This module contains 4 classes:
-    TypeMetaClass
-        contains function that excludes the __init_subclass__ method    
-    BaseGeometry
-        contains two functions:
-            one that excludes the __init_subclass__ method
-            an integer validator that that ensures input is a positive integer
-    Rectangle
-        contains two parameters: width and length
-        returns the area of the rectangle
-    Square
-        contains a parameter: size
-        returns the area of the square
-
+    This module contains 4 classes:
+        TypeMetaClass
+            contains function that excludes the __init_subclass__ method    
+        BaseGeometry
+            contains two functions:
+                one that excludes the __init_subclass__ method
+                an integer validator that that ensures input is a positive integer
+        Rectangle
+            contains two parameters: width and length
+            returns the area of the rectangle
+        Square
+            contains a parameter: size
+            returns the area of the square
 """
 
 
