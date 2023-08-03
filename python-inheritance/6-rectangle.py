@@ -7,7 +7,13 @@ class BaseGeometry:
     """
     This is a base class
     """
+    def __dir__(cls) -> None:
+        """
+        Exclude attribute init subclass in dir()
+        """
+        attributes = super().__dir__()
 
+        return [attribute for attribute in attributes if attribute != '__init_subclass__']
 
     def area(self):
         """
@@ -43,4 +49,5 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         return f"Rectangle(width={self._Rectangle__width}, height={self._Rectangle__height})"
     
-print(dir(Rectangle))
+bg = BaseGeometry()
+print(dir(bg))
