@@ -35,10 +35,12 @@ class Rectangle(BaseGeometry):
         """
         function sets the values width and height and ensures
         """
-        self.integer_validator("width", width)
+        super().integer_validator("width", width)
         self._Rectangle__width = width
-        self.integer_validator("height", height)
+        super().integer_validator("height", height)
         self._Rectangle__height = height
 
     def __str__(self):
         return f"Rectangle(width={self._Rectangle__width}, height={self._Rectangle__height})"
+    
+print(dir(Rectangle))
