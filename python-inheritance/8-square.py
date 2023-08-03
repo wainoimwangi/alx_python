@@ -3,6 +3,7 @@
     This is a base class
 """
 
+
 class BaseGeometry:
     """
     This is a base class
@@ -13,7 +14,8 @@ class BaseGeometry:
         """
         attributes = super().__dir__()
 
-        return [attribute for attribute in attributes if attribute != '__init_subclass__']
+        return [attribute for attribute in attributes 
+                if attribute != '__init_subclass__']
 
     def area(self):
         """
@@ -33,6 +35,7 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
         self.value = value
 
+
 class Rectangle(BaseGeometry):
     """
     This is a sub-class of the baseclass
@@ -51,7 +54,8 @@ class Rectangle(BaseGeometry):
     
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
- 
+
+
 class Square(BaseGeometry):
     """
     This is a sub-class of the baseclass
