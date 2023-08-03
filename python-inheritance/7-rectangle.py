@@ -65,5 +65,10 @@ class Rectangle(BaseGeometry):
     
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
-    
 
+
+class Square(Rectangle):
+    """
+    This is a sub-class of the Rectangle class
+    """
+    pass

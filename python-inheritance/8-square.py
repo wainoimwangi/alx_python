@@ -117,7 +117,7 @@ class Rectangle(BaseGeometry):
 
 class Square(Rectangle):
     """
-    This is a sub-class of the baseclass
+    This is a sub-class of the Rectangle class
     """
 
     def __init__(self, size):
@@ -138,3 +138,5 @@ class Square(Rectangle):
         Returns a formatted string representation of the object size
         """
         return f"[Square]{self._Square__size ** 2}"
+
+print(issubclass(Square, Rectangle))
