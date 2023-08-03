@@ -122,7 +122,7 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """
-        function sets the values width and height and ensures
+        function sets the value size and ensures it's a positive integer
         """
         super().integer_validator("size", size)
         self._Square__size = size
