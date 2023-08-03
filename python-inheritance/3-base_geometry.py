@@ -10,7 +10,6 @@ class BaseGeometry:
     """
     pass
 
-class MyNewClass(BaseGeometry):
     def __dir__(cls) -> None:
         """
         Exclude attribute init subclass in dir()
