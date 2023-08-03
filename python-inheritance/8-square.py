@@ -51,7 +51,7 @@ class Rectangle(BaseGeometry):
     
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
-    
+ 
 class Square(BaseGeometry):
     """
     This is a sub-class of the baseclass
@@ -65,7 +65,6 @@ class Square(BaseGeometry):
 
     def area(self):
         return self._Square__size ** 2
-    
-    def __str__(self):
-        return f"Square(size={self._Square__size}"
 
+    def __str__(self):
+        return f"[Square]{self._Square__size}"
