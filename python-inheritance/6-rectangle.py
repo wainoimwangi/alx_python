@@ -3,7 +3,21 @@
     This is a base class
 """
 
-class BaseGeometry:
+class TypeMetaClass(type):
+    """
+    This is a metaclass used to represent the class type inorder to eliminate
+    the inherited method init subclass
+    """
+    def __dir__(cls) -> None:
+        """
+        Exclude attribute init subclass in dir()
+        """
+        attributes = super().__dir__()
+
+        return [attribute for attribute in attributes if attribute != '__init_subclass__']
+
+
+class BaseGeometry(metaclass=TypeMetaClass):
     """
     This is a base class
     """
@@ -49,5 +63,4 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         return f"Rectangle(width={self._Rectangle__width}, height={self._Rectangle__height})"
     
-bg = BaseGeometry()
-print(dir(bg))
+

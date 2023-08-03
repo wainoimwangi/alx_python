@@ -4,7 +4,21 @@
 """
 
 
-class BaseGeometry:
+class TypeMetaClass(type):
+    """
+    This is a metaclass used to represent the class type inorder to eliminate
+    the inherited method init subclass from basegeometry
+    """
+    def __dir__(cls) -> None:
+        """
+        Exclude attribute init subclass in dir()
+        """
+        attributes = super().__dir__()
+
+        return [attribute for attribute in attributes if attribute != '__init_subclass__']
+
+
+class BaseGeometry(metaclass=TypeMetaClass):
     """
     This is a base class
     """
@@ -50,9 +64,15 @@ class Rectangle(BaseGeometry):
         self._Rectangle__height = height
 
     def area(self):
+        """
+        function that returns the area of the rectangle
+        """
         return self.__width * self.__height
   
     def __str__(self):
+        """
+        Returns a formatted string representation of the Rectangle's dimensions
+        """
         return f"[Rectangle] {self.__width}/{self.__height}"
 
 
@@ -65,9 +85,8 @@ class Square(BaseGeometry):
         Exclude attribute init subclass in dir()
         """
         attributes = super().__dir__()
-
         return [attribute for attribute in attributes
-if attribute != '__init_subclass__']
+        if attribute != '__init_subclass__']
 
     def __init__(self, size):
         """
@@ -77,7 +96,13 @@ if attribute != '__init_subclass__']
         self._Square__size = size
 
     def area(self):
+        """
+        function that returns the area of the rectangle
+        """
         return self._Square__size ** 2
 
     def __str__(self):
-        return f"[Square]{self._Square__size}"
+        """
+        Returns a formatted string representation of the object size
+        """
+        return f"[Square]{self._Square__size ** 2}"
