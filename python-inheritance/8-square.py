@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-Rectangle = __import__('6-rectangle').Rectangle
 """
 This module defines several classes for geometry calculations.
 
@@ -44,6 +43,10 @@ class Square(Rectangle):
         Returns the area of the square.
     __str__(self):
         Returns a formatted string representation of the Square's size.
+"""
+Rectangle = __import__('7-rectangle').Rectangle
+"""
+import rectangle class
 """
 
 
