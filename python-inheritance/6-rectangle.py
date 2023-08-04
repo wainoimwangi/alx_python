@@ -79,7 +79,7 @@ class BaseGeometry(metaclass=TypeMetaClass):
         self.value = value
 
 
-class Rectangle(BaseGeometry()):
+class Rectangle(BaseGeometry):
     """
     This is a sub-class of the baseclass
     """
@@ -93,6 +93,7 @@ class Rectangle(BaseGeometry()):
         self._Rectangle__height = height
 
     def __str__(self):
+        """
+        Returns a formatted string representation of the Rectangle's dimensions.
+        """
         return f"Rectangle(width={self._Rectangle__width}, height={self._Rectangle__height})"
-    
-
