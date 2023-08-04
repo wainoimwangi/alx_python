@@ -35,7 +35,7 @@ class BaseGeometry(metaclass=TypeMetaClass):
         """
         raise Exception("area() is not implemented")
     
-    def integer_validator(self, name, value):
+    def integer_validator(self, name: str, value: int):
         """
         Function validates whether the value is an integer and
         is greater than 0, otherwise it raises an error
@@ -46,3 +46,9 @@ class BaseGeometry(metaclass=TypeMetaClass):
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
         self.value = value
+
+class Rectangle(BaseGeometry):
+    """
+    This is a sub-class of the baseclass
+    """
+    pass
