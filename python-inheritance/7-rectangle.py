@@ -67,9 +67,8 @@ class Rectangle(BaseGeometry):
         return f"[Rectangle] {self.__width}/{self.__height}"
 
 
-#class Square(Rectangle):
+class Square(Rectangle):
     """
     This is a sub-class of the Rectangle class
     """
-#    pass
-print(issubclass(Square, Rectangle))
+    pass
