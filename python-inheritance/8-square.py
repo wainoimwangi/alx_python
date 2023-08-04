@@ -138,3 +138,4 @@ class Square(Rectangle):
         Returns a formatted string representation of the object size
         """
         return f"[Square]{self._Square__size ** 2}"
+print(issubclass(Square, Rectangle))
