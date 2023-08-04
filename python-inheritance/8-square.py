@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+Rectangle = __import__('6-rectangle').Rectangle
 """
 This module defines several classes for geometry calculations.
 
@@ -87,32 +88,6 @@ class BaseGeometry(metaclass=TypeMetaClass):
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
         self.value = value
-
-
-class Rectangle(BaseGeometry):
-    """
-    This is a sub-class of the baseclass
-    """
-    def __init__(self, width, height):
-        """
-        function sets the values width and height and ensures
-        """
-        super().integer_validator("width", width)
-        self._Rectangle__width = width
-        super().integer_validator("height", height)
-        self._Rectangle__height = height
-
-    def area(self):
-        """
-        function that returns the area of the rectangle
-        """
-        return self.__width * self.__height
-
-    def __str__(self):
-        """
-        Returns a formatted string representation of the Rectangle's dimensions
-        """
-        return f"[Rectangle] {self.__width}/{self.__height}"
 
 
 class Square(Rectangle):
