@@ -13,8 +13,7 @@ class TypeMetaClass(type):
         Exclude attribute init subclass in dir()
         """
         attributes = super().__dir__()
-
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+        return [attribute for attribute in attributes if attribute != '__init_subclass__']
 
 
 class Rectangle(BaseGeometry, metaclass=TypeMetaClass):
@@ -26,8 +25,8 @@ class Rectangle(BaseGeometry, metaclass=TypeMetaClass):
         function sets the values width and height and ensures
         """
         BaseGeometry.integer_validator(self, "width", width)
-        self.__width = width
         BaseGeometry.integer_validator(self, "height", height)
+        self.__width = width
         self.__height = height
 
     def area(self):
