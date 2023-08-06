@@ -2,7 +2,7 @@
 """
     This is a base class
 """
-
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
 class TypeMetaClass(type):
     """
     This is a metaclass used to represent the class type inorder to eliminate
@@ -30,7 +30,7 @@ class BaseGeometry(metaclass=TypeMetaClass):
         return [attribute for attribute in attributes if attribute != '__init_subclass__']
 
 
-class Rectangle(BaseGeometry):
+class Rectangle(BaseGeometry, metaclass=TypeMetaClass):
     """
     This is a sub-class of the baseclass
     """
@@ -38,9 +38,9 @@ class Rectangle(BaseGeometry):
         """
         function sets the values width and height and ensures
         """
-        super().integer_validator("width", width)
+        super().integer_validator(self, "width", width)
         self.__width = width
-        super().integer_validator("height", height)
+        super().integer_validator(self, "height", height)
         self.__height = height
 
     def area(self):
@@ -48,3 +48,5 @@ class Rectangle(BaseGeometry):
     
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
+
+print(issubclass(Rectangle, BaseGeometry))

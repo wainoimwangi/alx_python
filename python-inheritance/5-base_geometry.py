@@ -46,9 +46,3 @@ class BaseGeometry(metaclass=TypeMetaClass):
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
         self.value = value
-
-class Rectangle(BaseGeometry):
-    """
-    This is a sub-class of the baseclass
-    """
-    pass
