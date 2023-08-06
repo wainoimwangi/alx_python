@@ -14,7 +14,7 @@ class TypeMetaClass(type):
         """
         attributes = super().__dir__()
 
-        return [attribute for attribute in attributes if attribute != '__init_subclass__']
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 
 
 class Rectangle(BaseGeometry, metaclass=TypeMetaClass):
@@ -35,5 +35,3 @@ class Rectangle(BaseGeometry, metaclass=TypeMetaClass):
     
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
-
-print(issubclass(Rectangle, BaseGeometry))
