@@ -25,9 +25,9 @@ class Rectangle(BaseGeometry, metaclass=TypeMetaClass):
         """
         function sets the values width and height and ensures
         """
-        super().integer_validator(self, "width", width)
+        BaseGeometry.integer_validator(self, "width", width)
         self.__width = width
-        super().integer_validator(self, "height", height)
+        BaseGeometry.integer_validator(self, "height", height)
         self.__height = height
 
     def area(self):
