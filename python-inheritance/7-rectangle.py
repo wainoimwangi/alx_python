@@ -17,19 +17,6 @@ class TypeMetaClass(type):
         return [attribute for attribute in attributes if attribute != '__init_subclass__']
 
 
-class BaseGeometry(metaclass=TypeMetaClass):
-    """
-    This is a base class
-    """
-    def __dir__(cls) -> None:
-        """
-        Exclude attribute init subclass in dir()
-        """
-        attributes = super().__dir__()
-
-        return [attribute for attribute in attributes if attribute != '__init_subclass__']
-
-
 class Rectangle(BaseGeometry, metaclass=TypeMetaClass):
     """
     This is a sub-class of the baseclass
