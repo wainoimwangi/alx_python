@@ -40,7 +40,7 @@ class Rectangle(Base):
         """
         A setter for width
         """
-        if not isinstance(value, int):
+        if value is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -59,7 +59,7 @@ class Rectangle(Base):
         """
         A setter for height
         """
-        if not isinstance(value, int):
+        if value is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -78,7 +78,7 @@ class Rectangle(Base):
         """
         A setter for x
         """
-        if not isinstance(value, int):
+        if value is not int:
             raise TypeError("x must be an integer")
         if value <= 0:
             raise ValueError("x must be >= 0")
@@ -97,7 +97,7 @@ class Rectangle(Base):
         """
         A setter for y
         """
-        if not isinstance(value, int):
+        if value is not int:
             raise TypeError("y must be an integer")
         if value <= 0:
             raise ValueError("y must be >= 0")
