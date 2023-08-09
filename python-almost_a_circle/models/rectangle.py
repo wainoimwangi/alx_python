@@ -10,7 +10,7 @@
         Calls the super class id
         Assigns each argument to the right attribute
 """
-Base = __import__('base').Base
+from models.base import Base
 
 class Rectangle(Base):
     """
