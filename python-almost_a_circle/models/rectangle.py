@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 """
-    This is a base class
+    Class Rectangle that inherits from Base
+    Private instance attributes with gettera and setters:
+        width
+        height
+        x
+        y
+    Class constructor: def_init_(self,width,height,x,y,id=None)
+        Calls the super class id
+        Assigns each argument to the right attribute
 """
 Base = __import__('base').Base
 
@@ -11,14 +19,14 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
        """
-       function that assigns variables arguments
+       function that assigns variables their correct attributes
        """
        super().__init__(id)
        self.__width = width
        self.__height = height
        self.__x = x
        self.__y = y
-       
+
 # width
 @property
 def width(self):
