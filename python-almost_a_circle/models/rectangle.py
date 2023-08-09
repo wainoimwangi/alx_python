@@ -122,13 +122,6 @@ class Rectangle(Base):
         for j in range(self.height):
             print(" " * self.x + "#" * self.width)
 
-    def __str__(self):
-        """
-        Updates the class Rectangle by overriding the __str__ method 
-        so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>
-        """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
-
     def update(self, *args, **kwargs):
         """
         update the attributes of a Rectangle instance using a variable
@@ -160,3 +153,10 @@ class Rectangle(Base):
                 self.x = value
             elif key == 'y':
                 self.y = value
+
+    def __str__(self):
+        """
+        Updates the class Rectangle by overriding the __str__ method 
+        so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
