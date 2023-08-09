@@ -128,31 +128,29 @@ class Rectangle(Base):
         number of arguments passed in the *args parameter.
         """
         arguments = len(args)
-        if arguments >= 1:
-            self.id = args[0]
-        if arguments >= 2:
-            self.width = args[1]
-        if arguments >= 3:
-            self.height = args[2]
-        if arguments >= 4:
-            self.x = args[3]
-        if arguments >= 5:
-            self.y = args[4]
-
-        if arguments == 0 or not kwargs:
-            return
-        
-        for key, value in kwargs.items():
-            if key == 'id':
-                self.id = value
-            elif key == 'width':
-                self.width = value
-            elif key == 'height':
-                self.height = value
-            elif key == 'x':
-                self.x = value
-            elif key == 'y':
-                self.y = value
+        if args and arguments != 0:
+            if arguments >= 1:
+                self.id = args[0]
+            if arguments >= 2:
+                self.width = args[1]
+            if arguments >= 3:
+                self.height = args[2]
+            if arguments >= 4:
+                self.x = args[3]
+            if arguments >= 5:
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                elif key == 'width':
+                    self.width = value
+                elif key == 'height':
+                    self.height = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
 
     def __str__(self):
         """
