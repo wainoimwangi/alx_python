@@ -27,70 +27,70 @@ class Rectangle(Base):
        self.__x = x
        self.__y = y
 
-# width
-@property
-def width(self):
-    """
-    A getter for width
-    """
-    return self.__width
+    # width
+    @property
+    def width(self):
+        """
+        A getter for width
+        """
+        return self.__width
 
-@width.setter
-def width(self, value):
-    """
-    A setter for width
-    """
-    if value <= 0:
-        raise ValueError("Must be a positive value")
-        self.__width = value
+    @width.setter
+    def width(self, value):
+        """
+        A setter for width
+        """
+        if value <= 0:
+            raise ValueError("Must be a positive value")
+            self.__width = value
 
-# height
-@property
-def height(self):
-    """
-    A getter for height
-    """
-    return self.__height
+    # height
+    @property
+    def height(self):
+        """
+        A getter for height
+        """
+        return self.__height
 
-@height.setter
-def height(self, value):
-    """
-    A setter for height
-    """
-    if value <= 0:
-        raise ValueError("Must be a positive value")
-        self.__height = value
+    @height.setter
+    def height(self, value):
+        """
+        A setter for height
+        """
+        if value <= 0:
+            raise ValueError("Must be a positive value")
+            self.__height = value
 
-# x
-@property
-def x(self):
-    """
-    A getter for x
-    """
-    return self.__x
+    # x
+    @property
+    def x(self):
+        """
+        A getter for x
+        """
+        return self.__x
 
-@x.setter
-def x(self, value):
-    """
-    A setter for x
-    """
-    if value < 0:
-        raise ValueError("Must be a positive value")
-        self.__x = value
+    @x.setter
+    def x(self, value):
+        """
+        A setter for x
+        """
+        if value < 0:
+            raise ValueError("Must be a positive value")
+            self.__x = value
 
-# y
-@property
-def y(self):
-    """
-    A getter for y
-    """
-    return self.__y
+    # y
+    @property
+    def y(self):
+        """
+        A getter for y
+        """
+        return self.__y
 
-@y.setter
-def y(self, value):
-    """
-    A setter for y
-    """
-    if value < 0:
-        raise ValueError("Must be a positive value")
-        self.__y = value
+    @y.setter
+    def y(self, value):
+        """
+        A setter for y
+        """
+        if value < 0:
+            raise ValueError("Must be a positive value")
+            self.__y = value
