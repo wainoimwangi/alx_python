@@ -22,10 +22,14 @@ class Rectangle(Base):
        function that assigns variables their correct attributes
        """
        super().__init__(id)
-       self.__width = width
-       self.__height = height
-       self.__x = x
-       self.__y = y
+       self.__width = None
+       self.__height = None
+       self.__x = None
+       self.__y = None
+       self.width = width
+       self.height = height
+       self.x = x
+       self.y = y
 
     # width
     @property
