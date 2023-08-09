@@ -9,10 +9,6 @@ class Rectangle(Base):
     Rectangle class that contains private instance
     variables: width, height, x and y
     """
-    __width -> width
-    __height -> height
-    __x -> x
-    __y -> y
     def __init__(self, width, height, x=0, y=0, id=None):
        """
        function that assigns variables arguments
@@ -22,6 +18,7 @@ class Rectangle(Base):
        self.__height = height
        self.__x = x
        self.__y = y
+       
 # width
 @property
 def width(self):
