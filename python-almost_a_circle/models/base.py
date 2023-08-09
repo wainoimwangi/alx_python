@@ -24,8 +24,8 @@ class Base:
         otherwise, increment __nb_objects and assign the new 
         value to the public instance attribute id
         """
-        if id != None:
+        if id is not None:
             self.id = id
         else:     
-            value = __nb_objects + 1
+            value = Base.__nb_objects + 1
             self.id = value
