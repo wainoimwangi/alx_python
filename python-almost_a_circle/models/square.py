@@ -24,7 +24,7 @@ class Square(Rectangle):
         Call super class with id, x, y, width and height
         Width, height, x and y validation must inherit from rectangle
         """
-        super().__init__(size, size, x=0, y=0, id=None)
+        super().__init__(size, size, x, y, id=None)
 
     @property
     def size(self):
