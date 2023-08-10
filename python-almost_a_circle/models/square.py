@@ -25,9 +25,7 @@ class Square(Rectangle):
         Create new attributes for this class
         Width, height, x and y validation must inherit from rectangle
         """
-        super().__init__(id, x, y, size)
-        Rectangle.width(self, "value" value)
-        self.__size = value
+        super().__init__(id=None, x=0, y=0, size, size)
 
     @property
     def size(self):
