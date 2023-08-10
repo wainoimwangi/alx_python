@@ -9,7 +9,7 @@
     Overloading __str__ method should return: 
     [Square] (<id>) <x>/<y> - <size>
 """
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 class Square(Rectangle):
     """
