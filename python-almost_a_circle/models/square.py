@@ -9,23 +9,22 @@
     Overloading __str__ method should return: 
     [Square] (<id>) <x>/<y> - <size>
 """
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """
     Inherits from Rectangle
     Class constructor:
-        def __init__(self, size, x=0, y=0, id=None):
+        def _init_(self, size, x=0, y=0, id=None):
     The overloading __str__ method should return:
         [Square] (<id>) <x>/<y> - <size>
     """
     def __init__(self, size, x=0, y=0, id=None):
         """
         Call super class with id, x, y, width and height
-        Create new attributes for this class
         Width, height, x and y validation must inherit from rectangle
         """
-        super().__init__(id=None, x=0, y=0, size, size)
+        super().__init__(size, size, x=0, y=0, id=None)
 
     @property
     def size(self):
