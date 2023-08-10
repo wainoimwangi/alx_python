@@ -25,9 +25,6 @@ class Square(Rectangle):
         Width, height, x and y validation must inherit from rectangle
         """
         super().__init__(size, size, x=0, y=0, id=None)
-        super().display(self)
-        super().x(self, size)
-        super().y(self, size)
 
     @property
     def size(self):
