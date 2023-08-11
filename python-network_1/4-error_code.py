@@ -10,7 +10,7 @@ Uses the packages requests and sys
 import requests
 import sys
 
-def check_staus_code(url):
+def check_status_code(url):
     """
     Fetches the status from the given URL and displays the response body.
 
