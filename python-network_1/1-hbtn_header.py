@@ -14,10 +14,10 @@ def check_request_id(url):
     Fetches the X-Request-Id variable from the response header of the given URL.
     """
     try:
-    response = requests.get(url)
-    response.raise_for_status()
+        response = requests.get(url)
+        response.raise_for_status()
 
-    x_request_id = response.headers.get('X-Request-Id')
+        x_request_id = response.headers.get('X-Request-Id')
 
     if x_request_id:
         print("X-Request-Id:", x_request_id)
