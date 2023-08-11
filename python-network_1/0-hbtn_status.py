@@ -27,4 +27,4 @@ def check_status(url):
 
 if __name__ == "__main__":
     fetch_url = "https://alu-intranet.hbtn.io/status"
-    check_status(status_url)
+    check_status(fetch_url)
