@@ -6,7 +6,7 @@ Uses the package requests
 """
 import requests
 
-def fetch_and_display_status(url):
+def check_status(url):
     """
     Fetches the status from the given URL and displays the response body.
 
@@ -16,15 +16,15 @@ def fetch_and_display_status(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
-        content = response.text
+        context = response.text
 
         print("Body response:")
-        print("\t- type:", type(content))
-        print("\t- content:", content)
+        print("\t- type:", type(context))
+        print("\t- content:", context)
 
     except requests.exceptions.RequestException as e:
-        print("An error occurred:", e)
+        print("Error occurred:", e)
 
 if __name__ == "__main__":
-    status_url = "https://alu-intranet.hbtn.io/status"
-    fetch_and_display_status(status_url)
+    fetch_url = "https://alu-intranet.hbtn.io/status"
+    check_status(status_url)
