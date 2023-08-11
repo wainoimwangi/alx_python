@@ -10,7 +10,7 @@ Uses the packages requests and sys
 import requests
 import sys
 
-def check_email(url):
+def check_email(url, email):
     """
     Sends a POST request to the given URL with the email as a parameter
     and displays the response body.
