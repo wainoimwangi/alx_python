@@ -25,7 +25,6 @@ def check_status_code(url):
         if response.status_code >= 400:
             print("Error code:", response.status_code)
         else:
-            print("Body response:")
             print(context)
 
     except requests.exceptions.RequestException as e:
