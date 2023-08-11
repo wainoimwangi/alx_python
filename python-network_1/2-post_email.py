@@ -21,7 +21,7 @@ def check_email(url, email):
     """
     try:
         payload = {'email': email}
-        response = requests.get(url, data=payload)
+        response = requests.post(url, data=payload)
         response.raise_for_status()
 
         context = response.text
