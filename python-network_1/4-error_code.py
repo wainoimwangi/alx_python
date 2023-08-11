@@ -31,6 +31,6 @@ def check_staus_code(url):
     except requests.exceptions.RequestException as e:
         print("Error occured:", e)
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     url = sys.argv[1]
     check_status_code(url)
