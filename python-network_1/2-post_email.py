@@ -26,7 +26,7 @@ def check_email(url, email):
 
         context = response.text
 
-        print("Email: {}".format(context))
+        print(context)
 
     except requests.exceptions.RequestException as e:
         print("Error occurred:", e)
