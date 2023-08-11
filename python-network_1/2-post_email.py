@@ -19,17 +19,13 @@ def check_email(url, email):
         url (str): The URL to send the POST request to.
         email (str): The email address to include in the request.
     """
-    try:
-        payload = {'email': email}
-        response = requests.get(url, data=payload)
-        response.raise_for_status()
+    payload = {'email': email}
+    response = requests.get(url, data=payload)
+    response.raise_for_status()
 
-        context = response.text
+    context = response.text
 
-        print("Your email is: {}".format(context))
-    
-    except requests.exceptions.RequestException as e:
-        print("Error occured:", e)
+    print("Email: {}".format(context))
 
 if __name__ == "__main__":
     url = sys.argv[1]
