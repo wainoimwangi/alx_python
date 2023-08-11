@@ -20,9 +20,9 @@ def check_request_id(url):
         x_request_id = response.headers.get('X-Request-Id')
 
         if x_request_id:
-            print("X-Request-Id:", x_request_id)
+            print("{}".format(x_request_id))
         else:
-            print("X-Request-Id not found in response header.")
+            print("X-Request-Id not found.")
 
     except requests.exceptions.RequestException as e:
         print("Error occurred:", e)
