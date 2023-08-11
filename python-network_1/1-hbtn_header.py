@@ -22,7 +22,7 @@ def check_request_id(url):
         if x_request_id:
             print("{}".format(x_request_id))
         else:
-            print("X-Request-Id not found.")
+            print("None")
 
     except requests.exceptions.RequestException as e:
         print("Error occurred:", e)
