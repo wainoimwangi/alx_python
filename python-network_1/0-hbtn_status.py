@@ -6,12 +6,25 @@ Uses the package requests
 """
 import requests
 
-request = requests.get("https://alu-intranet.hbtn.io/status")
+def fetch_and_display_status(url):
+    """
+    Fetches the status from the given URL and displays the response body.
 
-if response.status_code == 200:
-    data = response.json()
-    print("Body response:")
-    print("\t- type: {}".format(type(data)))
-    print("\t- content: {}".format(data))
-else:
-    print("Error: Unable to fetch data. Status code: {}".format(response.status_code))
+    Args:
+        url (str): The URL to fetch the status from.
+    """
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        content = response.text
+
+        print("Body response:")
+        print("\t- type:", type(content))
+        print("\t- content:", content)
+
+    except requests.exceptions.RequestException as e:
+        print("An error occurred:", e)
+
+if __name__ == "__main__":
+    status_url = "https://alu-intranet.hbtn.io/status"
+    fetch_and_display_status(status_url)
