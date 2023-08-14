@@ -17,22 +17,21 @@ import requests
 import sys
 
 def main():
-    if len(sys.argv) < 2:
-        q = ""
+    if len(sys.argv) == 1:
+        letter = ""
     else:
-        q = sys.argv[1]
+        letter = sys.argv[1]
 
-    url = "http://0.0.0.0:5000/search_user"
-    parameter = {'q': q}
+    parameter = {'q':letter}
+    url = 'http://0.0.0.0:5000/search_user'
     response = requests.post(url, data=parameter)
 
     try:
-        json_data = response.json()
-        if json_data:
-            print("[{}] {}".format(json_data['id'], json_data['name']))
+        if response.json():
+                print("[{}] {}".format(response.json()['id'], response.json()['name']))
         else:
-            print("No Result")
-    except ValueError:
+            print("No result")
+    except:
         print("Not a valid JSON")
 
 if __name__ == "__main__":
