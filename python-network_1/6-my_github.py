@@ -14,25 +14,15 @@ import requests
 import sys
 
 def main():
+    url = 'https://api.github.com/user'
     username = sys.argv[1]
-    access_token = sys.argv[2]
+    password = sys.argv[2]
+    parameters = (username, password)
 
-    url = "https://api.github.com/user"
-    headers = {
-        "Authorization": f"Basic {username}:{access_token}"
-    }
-
-    response = requests.get(url, headers=headers)
-
-    if response.status_code == 200:
-        user_data = response.json()
-        user_id = user_data.get("id")
-        if user_id is not None:
-            print("Your GitHub user ID:", user_id)
-        else:
-            print("User ID not found in response.")
-    else:
-        print("Error fetching user data. Status code:", response.status_code)
-
+    response = requests.get(url, auth=parameters)
+    try:
+        print(response.json()['id'])
+    except:
+        print('None')
 if __name__ == "__main__":
     main()
