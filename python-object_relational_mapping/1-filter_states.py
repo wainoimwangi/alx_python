@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Python script that retrieves and displays all states with names starting with 'N'
-(upper case 'N') from the hbtn_0e_0_usa database using the MySQLdb module
+Python script that retrieves and displays all states
+with names starting with 'N' (upper case 'N')
+from the hbtn_0e_0_usa database using the MySQLdb module
 """
 import MySQLdb
 import sys
