@@ -9,12 +9,12 @@ The value of this variable is different for each request
 import requests
 import sys
 
-def check_request_id(url):
+def check_request_id(url, email):
     """
     Fetches the X-Request-Id variable from the response header of the given URL.
     """
     try:
-        response = requests.get(url)
+        response = requests.get(url, email)
         response.raise_for_status()
 
         x_request_id = response.headers.get('X-Request-Id')
