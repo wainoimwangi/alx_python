@@ -14,8 +14,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host='localhost',
                          user=sys.argv[1],
                          passwd=sys.argv[2],
-                         db=sys.argv[3],
-                         state_name=sys.argv[4])
+                         db=sys.argv[3])
     """
     Create a cursor to interact with the database
     """
@@ -23,11 +22,12 @@ if __name__ == "__main__":
     """
     Execute the SQL query to retrieve states
     """
-    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
+    state_name = sys.argv[4]
+    cursor.execute("SELECT * FROM states WHERE name == '{}'.format(state_name) ORDER BY states.id ASC")
     """
     fetch and display the results
     """
-    [print("state {}".format(state_name)) for state in cursor.fetchall()]
+    [print(state) for state in cursor.fetchall()]
     """
     Close the cursor and the database connection
     """
