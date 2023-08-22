@@ -21,11 +21,11 @@ if __name__ == "__main__":
     """
     Execute the SQL query to retrieve states
     """
-    cursor.execute("SELECT * FROM states WHERE states[1][0] == "N" ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     """
     fetch and display the results
     """
-    [print(state) for state in cursor.fetchall()]
+    [print(state) for state in cursor.fetchall() if states[1][0] == "N"]
     """
     Close the cursor and the database connection
     """
