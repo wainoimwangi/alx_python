@@ -23,7 +23,7 @@ if __name__ == "__main__":
     Execute the SQL query to retrieve states
     """
     state_name = sys.argv[4]
-    cursor.execute("SELECT * FROM states WHERE FINARY name = '{}'.format(state_name) ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states WHERE BINARY name = '{}'".format(state_name))
     """
     fetch and display the results
     """
