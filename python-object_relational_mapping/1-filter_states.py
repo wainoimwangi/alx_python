@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Python script that retrieves and displays all states from
-the hbtn_0e_0_usa database using the MySQLdb module
+Python script that retrieves and displays all states with names starting with 'N'
+(upper case 'N') from the hbtn_0e_0_usa database using the MySQLdb module
 """
 import MySQLdb
 import sys
@@ -21,11 +21,7 @@ if __name__ == "__main__":
     """
     Execute the SQL query to retrieve states
     """
-    cursor.execute("SELECT * 
-                    FROM states 
-                    WHERE name 
-                    LIKE '%N%' 
-                    ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE '%N%' ORDER BY states.id ASC")
     """
     fetch and display the results
     """
