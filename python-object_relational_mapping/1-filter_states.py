@@ -25,7 +25,7 @@ if __name__ == "__main__":
     """
     fetch and display the results
     """
-    [print(state) for state in cursor.fetchall() if states[1][0] == "N"]
+    [print(state) for state in cursor.fetchall() if state[1][0] == "N"]
     """
     Close the cursor and the database connection
     """
