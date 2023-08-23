@@ -36,4 +36,4 @@ def safe(user, passwd, db, state_name):
     db.close()
 
 if __name__ == "__main__":
-    safe()
+    safe(user, passwd, db, state_name)
