@@ -12,9 +12,9 @@ def safe():
     Establish a connection to the MySQL server
     """
     db = MySQLdb.connect(host='localhost',
-                         user=user_name,
-                         passwd=password,
-                         db=database_name)
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3])
     """
     Create a cursor to interact with the database
     """
