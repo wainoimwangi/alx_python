@@ -7,14 +7,14 @@ But this time, write one that is safe from MySQL injections!
 import MySQLdb
 import sys
 
-def safe(user, passwd, db, state_name):
+def safe():
     """
     Establish a connection to the MySQL server
     """
     db = MySQLdb.connect(host='localhost',
-                         user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3])
+                         user=user_name,
+                         passwd=password,
+                         db=database_name)
     """
     Create a cursor to interact with the database
     """
@@ -36,4 +36,4 @@ def safe(user, passwd, db, state_name):
     db.close()
 
 if __name__ == "__main__":
-    safe(user, passwd, db, state_name)
+    safe()
