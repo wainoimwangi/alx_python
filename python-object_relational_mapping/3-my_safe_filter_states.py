@@ -7,7 +7,7 @@ But this time, write one that is safe from MySQL injections!
 import MySQLdb
 import sys
 
-def safe(sys.argv[1], sys.argv[2], sys.argv[3], state_name):
+def safe(user, passwd, db, state_name):
     """
     Establish a connection to the MySQL server
     """
