@@ -7,7 +7,7 @@ But this time, write one that is safe from MySQL injections!
 import MySQLdb
 import sys
 
-def safe(username, password, database_name, search_name):
+def safe(sys.argv[1], sys.argv[2], sys.argv[3], state_name):
     """
     Establish a connection to the MySQL server
     """
@@ -24,7 +24,7 @@ def safe(username, password, database_name, search_name):
     """
     state_name = sys.argv[4]
     cursor.execute("SELECT * FROM states \
-                    WHERE BINARY name = '{}'".format(state_name))
+                    WHERE BINARY "name = '{}'".format(state_name) ORDER BY states.id ASC")
     """
     fetch and display the results
     """
@@ -35,5 +35,5 @@ def safe(username, password, database_name, search_name):
     cursor.close()
     db.close()
 
-if __name__ = "__main__":
-    main()
+if __name__ == "__main__":
+    safe()
