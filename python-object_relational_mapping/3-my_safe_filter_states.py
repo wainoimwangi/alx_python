@@ -24,7 +24,7 @@ def safe(user, passwd, db, state_name):
     """
     state_name = sys.argv[4]
     cursor.execute("SELECT * FROM states \
-                    WHERE BINARY "name = '{}'".format(state_name) ORDER BY states.id ASC")
+                    WHERE BINARY name = '{}'".format(state_name))
     """
     fetch and display the results
     """
