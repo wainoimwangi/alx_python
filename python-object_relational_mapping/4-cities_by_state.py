@@ -6,14 +6,14 @@ import sys
 import MySQLdb
 
 
-if __name__ =="__main__":
+if __name__  == "__main__":
     """
     connect to database
     """
     db = MySQLdb.connect(host='localhost',
-                        user=sys.argv[1],
-                        passwd=sys.argv[2],
-                        db=sys.argv[3])
+                            user=sys.argv[1],
+                            passwd=sys.argv[2],
+                            db=sys.argv[3])
     """
     create cursor for database
     """
