@@ -25,11 +25,11 @@ def safe():
     """
     state_name = sys.argv[4]
     cursor.execute("SELECT * FROM states \
-                    WHERE name = %s ORDER by states.id ASC")
+                    ORDER by states.id ASC")
     """
     fetch and display the results
     """
-    [print(state) for state in cursor.fetchall()]
+    [print(state) for state in cursor.fetchall() if state[1] == state_name]
     """
     Close the cursor and the database connection
     """
