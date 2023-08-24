@@ -25,7 +25,7 @@ def safe():
     """
     state_name = sys.argv[4]
     cursor.execute("SELECT * FROM states \
-                    WHERE BINARY name = '{}'".format(state_name))
+                    WHERE name = %s ORDER by states.id ASC")
     """
     fetch and display the results
     """
