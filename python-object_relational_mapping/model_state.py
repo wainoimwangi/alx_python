@@ -14,7 +14,7 @@ You must use the module SQLAlchemy
 Your script should connect to a MySQL server running on localhost at port 3306
 WARNING: all classes who inherit from Base must be imported before calling Base.metadata.create_all(engine)
 """
-from sqlalchemy import create_engine, column, integer, string, sequence
+from sqlalchemy import column, integer, string
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -26,14 +26,14 @@ Base = declarative_base()
 
 
 """
-    define class State that inherits from declarative base()
+define class State that inherits from declarative base()
 """
 class State(Base):
     """
-        State class that inherit from the base class.
-        Attributes:
-            id- auto-generated, unique integer, not null and a primary key
-            name- string of length 128 character
+    State class that inherits from the base class.
+    Attributes:
+        id- auto-generated, unique integer, not null and a primary key
+        name- string of length 128 character
     """
     __table__ = 'State'
 
