@@ -11,7 +11,7 @@ class State(Base):
         id- auto-generated, unique integer, not null and a primary key
         name- string of length 128 character
     """
-    __table__ = 'states'
+    __table__ = "states"
 
     id = Column(Integer, primary_key=True, nullable=False,
                 autoincrement=True, unique=True)
