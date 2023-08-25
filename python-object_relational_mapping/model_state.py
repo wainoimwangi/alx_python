@@ -23,7 +23,9 @@ from sqlalchemy.ext.declarative import declarative_base
 declare a mapping
 """
 Base = declarative_base()
-
+"""
+define class State
+"""
 class State(Base):
     """
     State class that inherit from the base class.
