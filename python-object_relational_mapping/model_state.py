@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 '''
 python script that contains the class definition of a State
 and an instance Base = declarative_base()
@@ -14,10 +13,11 @@ Base = declarative_base()
 # create a class state that inherits from base class
 class State(Base):
     '''
-    State class that inherits from the base class.
-    Attributes:
-        id- auto-generated, unique integer, not null and a primary key
-        name- string of length 128 character
+        State class that inherits from the base class.
+        Attributes:
+            id- auto-generated, unique integer, not null and a primary key
+            name- string of length 128 character
+        Return the class table metadata
     '''
     # define the table name
     __table__ = "states"
