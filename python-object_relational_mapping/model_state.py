@@ -26,14 +26,14 @@ Base = declarative_base()
 
 
 """
-define class State that inherits from declarative base()
+    define class State that inherits from declarative base()
 """
 class State(Base):
     """
-    State class that inherit from the base class.
-    Attributes:
-        id- auto-generated, unique integer, not null and a primary key
-        name- string of length 128 character
+        State class that inherit from the base class.
+        Attributes:
+            id- auto-generated, unique integer, not null and a primary key
+            name- string of length 128 character
     """
     __table__ = 'State'
 
