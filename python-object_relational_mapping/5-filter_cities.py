@@ -23,7 +23,7 @@ if __name__ == "__main__":
     """
     write an Sql query and execute
     """
-    cursor.execute("SELECT cities.id, cities.name, states.id\
+    cursor.execute("SELECT *\
                     FROM cities\
                     INNER JOIN states\
                     ON cities.state_id = states.id\
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     """
     fetch and display results
     """
-    [print(city) for city in cursor.fetchall() if city[1] == sys.argv[4]]
+    [print(", ".join([city[2] for city in cursor.fetchall() if city[4] == sys.argv[4]]))]
     """
     close cursor and database
     """
