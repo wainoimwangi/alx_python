@@ -31,7 +31,7 @@ if __name__ == "__main__":
     """
     fetch and display results
     """
-    [print(", ".join([city[2] for city in cursor.fetchall() \
+    [print(", ".join([city[2] for city in cursor.fetchall()
                       if city[4] == sys.argv[4]]))]
     """
     close cursor and database
