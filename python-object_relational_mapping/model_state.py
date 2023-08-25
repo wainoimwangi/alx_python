@@ -20,7 +20,7 @@ class State(Base):
         Return the class table metadata
     '''
     # define the table name
-    __table__ = "states"
+    __tablename__ = "states"
     # set the column of the states table
     id = Column(Integer, primary_key=True, nullable=False,
                 autoincrement=True, unique=True)
