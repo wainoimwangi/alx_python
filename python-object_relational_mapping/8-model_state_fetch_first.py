@@ -3,7 +3,7 @@ script that prints the first state object from the database
 """
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     from model_state import State, Base
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
