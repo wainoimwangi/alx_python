@@ -10,15 +10,14 @@ if __name__ == "__main__":
     import sys
     # create engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(engine)
     # begin a session
     Session = sessionmaker(bind=engine)
     session = Session()
     # perform query
-    state = session.query(State).order_by(State.id).all()
-    for state in states:
+    all_states = session.query(State).order_by(State.id).all()
+    for state in all_states:
         if 'a' in state.name:
             print("{}: {}".format(state.id, state.name))
     # close session
