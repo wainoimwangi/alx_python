@@ -13,13 +13,13 @@ if __name__ = "__main__":
         sys.exit(1)
     # create engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]), 
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     # begin a session
     session_class = sessionmaker(bind=engine)
     session = session_class()
     # perform query
-    first_state = session.query(State).order_by(State.id).first()
+    first_state = session.query(State).first()
     # print result
     if first_state:
         print("{}: {}".format(state.id, state.name))
