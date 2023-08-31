@@ -70,10 +70,10 @@ def even_odd_template(n):
     shows whether odd or even
     """
     if n % 2 != 0:
-        odd_or_even = "is odd"
+        state = "is odd"
     elif n % 2 == 0:
-        odd_or_even = "is even"
-    return render_template('6-number_odd_or_even.html', number=n, state=odd_or_even)
+        state = "is even"
+    return render_template('6-number_odd_or_even.html', number=n, state=state)
 
 if __name__ == '__main__':
     # run the flask developement server
