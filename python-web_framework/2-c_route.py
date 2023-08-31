@@ -32,7 +32,7 @@ def c(text):
     a function that displays c and replaces "_" with space
     """
     text = text.replace('_', " ")
-    return "C {}.format(escape(text))"
+    return "C {}".format(escape(text))
 
 if __name__ == '__main__':
     # run the flask developement server
