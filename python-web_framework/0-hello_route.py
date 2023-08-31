@@ -9,7 +9,7 @@ from flask import Flask
 app = Flask(__name__)
 
 # define route for the homepage
-@app.route('/', strict_slasher=False)
+@app.route('/', strict_slashes=False)
 def hello_hbnb():
     """
     a function that displays hello hbnb
