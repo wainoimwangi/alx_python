@@ -29,7 +29,7 @@ def hbnb():
 @app.route('/c/<text>')
 def c(text):
     """
-    a function that displays hbnb
+    a function that displays c and replaces "_" with space
     """
     text = text.replace('_', " ")
     return "C {}.format(escape(text))"
