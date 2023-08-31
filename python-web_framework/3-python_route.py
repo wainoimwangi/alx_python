@@ -37,7 +37,7 @@ def c(text):
 # define route for python/<text>
 @app.route('/python/(<text>)')
 @app.route('/python/<text>')
-@app.route('./python/')
+@app.route('/python/')
 @app.route('/python')
 def python(text='is cool'):
     """
