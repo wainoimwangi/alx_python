@@ -35,6 +35,7 @@ def c(text):
     return "C {}".format(escape(text))
 
 # define route for python/<text>
+@app.route('/python/(<text>)')
 @app.route('/python/<text>')
 @app.route('./python/')
 @app.route('/python')
