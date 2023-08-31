@@ -2,6 +2,7 @@
 """
 Script that starts a flask web application
 """
+# import flask module
 from flask import Flask
 
 # create a flask web application instance
@@ -17,4 +18,4 @@ def hello():
 
 if __name__ == "__main__":
     # run the flask developement server
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port='5000')
