@@ -69,7 +69,10 @@ def even_odd_template(n):
     displays a html file when n is an integer and
     shows whether odd or even
     """
-    odd_or_even = "odd" if n % 2 != 0 else "even"
+    if n % 2 != 0:
+        odd_or_even = "is odd"
+    else:
+        odd_or_even = "is even"
     return render_template('6-number_odd_or_even.html', number=n, state=odd_or_even)
 
 if __name__ == '__main__':
